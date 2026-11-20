@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Mouse" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 40 65">
+  <!-- Generator: Adobe Illustrator 29.1.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 142)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path class="st0" d="M20,62.7c-9.8,0-17.7-8-17.7-17.7v-25C2.3,10.2,10.2,2.3,20,2.3s17.7,8,17.7,17.7v25c0,9.8-8,17.7-17.7,17.7ZM20,4.3c-8.7,0-15.7,7.1-15.7,15.7v25c0,8.7,7.1,15.7,15.7,15.7s15.7-7.1,15.7-15.7v-25c0-8.7-7.1-15.7-15.7-15.7Z"/>
+</svg>

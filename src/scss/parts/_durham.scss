@@ -1,0 +1,18 @@
+#durham {
+    color: #fff;
+    #durham-content {
+        min-height: 60vh;
+        .img-gradient {
+            display: inline-block;
+            padding: 5px; /* thickness of the border */
+            background: linear-gradient(45deg, #f7c4f7 , #38bbcc); /* your gradient */
+            border-radius: 50%; /* optional */
+            img {
+                max-width: 100%;
+                display: block;
+                border-radius: 50%; 
+            }
+        }
+    }
+
+}

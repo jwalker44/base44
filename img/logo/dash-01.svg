@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="dash" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 257 89">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M154.48,45.52v-6.18h16.64v6.18h-16.64Z"/>
+</svg>

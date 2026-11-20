@@ -1,0 +1,14 @@
+.thanks {
+    p {
+        font-size: 1.2rem;        
+    }
+    .links {
+        a {
+            display: block;
+            color: #F3E6C3;
+            &:nth-of-type(2) {
+                color: #B2C8A8;
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "kievent",
+  "version": "1.0.0",
+  "description": "Event WP theme for KI events",
+  "main": "index.php",
+  "scripts": {
+    "build": "gulp build",
+    "watch": "gulp watch",
+    "bootstrap": "gulp bootstrap-js"
+  },
+  "author": "KI",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglifycss": "^1.1.0",
+    "sass": "^1.62.1",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "bootstrap-icons": "^1.11.1"
+  }
+}

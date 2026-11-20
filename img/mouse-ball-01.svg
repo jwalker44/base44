@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="button" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 40 65">
+  <!-- Generator: Adobe Illustrator 29.1.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 142)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #fff;
+      }
+
+      .st1 {
+        fill: #df7f32;
+      }
+    </style>
+  </defs>
+  <path class="st1" d="M20,49.6c-2.6,0-4.6-2.1-4.6-4.6s2.1-4.6,4.6-4.6,4.6,2.1,4.6,4.6-2.1,4.6-4.6,4.6Z"/>
+  <path class="st0" d="M20,41.3c2,0,3.6,1.6,3.6,3.6s-1.6,3.6-3.6,3.6-3.6-1.6-3.6-3.6,1.6-3.6,3.6-3.6M20,39.3c-3.1,0-5.6,2.5-5.6,5.6s2.5,5.6,5.6,5.6,5.6-2.5,5.6-5.6-2.5-5.6-5.6-5.6h0Z"/>
+</svg>

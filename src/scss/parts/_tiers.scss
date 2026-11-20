@@ -1,0 +1,48 @@
+#landing-tiers {
+    padding: 4rem 0;
+    color: #fff;
+    .tier {
+        background: #151F28;
+        background: linear-gradient(90deg,rgba(21, 31, 40, 1) 0%, rgba(21, 31, 40, 1) 54%, rgba(9, 14, 19, 1) 100%);
+    }
+    .logo-advanced, .logo-basic {
+        width: 100%;
+        text-align: center;
+        height: 150px;
+        display:flex;
+        justify-content: center;
+        .logo-advanced, .logo-basic {
+            position: absolute;
+            width: 150px;
+        }
+        &.background {
+            filter: blur(2px);
+        }
+    }   
+    .focus-text, .tier {
+        transform: translateY(200px);
+        opacity: 0;
+        filter: blur(5px);
+    }     
+    .wpengine {
+        transform: translateY(200px);
+        opacity: 0;
+        filter: blur(5px);
+        font-weight: 200;
+        font-size: 0.8rem;
+    }
+    .checkmark-list li {
+        &.green::before {
+            content: url("../img/green-check.svg");
+        }
+        &.yellow::before {
+            content: url("../img/yellow-check.svg");
+        }
+        &::before {
+            display: inline-block;
+            height: 12px;
+            width: 12px;
+            margin-right: 1rem;
+        }
+    }
+}

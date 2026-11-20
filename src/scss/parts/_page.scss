@@ -1,0 +1,80 @@
+#page-background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+  #page-background,
+  #page-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    img {
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+    }
+  }
+}
+#page-hero {
+  min-height: 75vh;
+  color: #fff;
+  position: relative;
+  margin-top: 125px;
+  button {
+    color: #fff;
+    margin-top: 2rem;
+    background: linear-gradient(200deg, #3f9196, #886d96);
+    border: solid 2px #fff;
+    padding: 1rem 3rem;
+    border-radius: 30px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease-in-out;
+  }
+  #page-text {
+    text-align: center;
+    p {
+      margin-top: 1rem;
+    }
+    h1 {
+      font-size: clamp(4rem, 3vw, 10rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      z-index: 999;
+      position: relative;
+      color: #fff;
+    }
+  }
+}
+
+form {
+  margin-top: 2rem;
+  .row {
+    margin-bottom: 1rem;
+  }
+}
+label {
+  color: #f3e6c3;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background-color: #d5e5f3;
+  border: none;
+  outline: none;
+  margin: 0.5rem 0;
+}
+
+.website-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
