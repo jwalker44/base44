@@ -24,7 +24,11 @@ html {
 p {
   font-weight: 400;
 }
-.button {
+.wp-block-button a {
+  background-color: rgb(63, 145, 150) !important;
+}
+.button,
+.wp-block-button a {
   padding: 1rem 2rem;
   border-radius: 30px;
   text-transform: uppercase;
@@ -34,15 +38,26 @@ p {
   white-space: nowrap;
   font-size: 1rem;
   font-weight: 600;
-  transition: background-color 0.3s ease-in-out;
+  outline-offset: 0;
   .color-blue {
     color: #438aba;
     font-weight: 600;
     font-size: 1rem;
   }
   &:hover {
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #fff !important;
+    outline: solid 1px #fff;
+    outline-offset: 6px;
+    animation: expand-outline 0.5s ease-out;
+    // background-color: rgba(0, 0, 0, 0.9);
+    // color: #fff !important;
+  }
+}
+@keyframes expand-outline {
+  0% {
+    outline-offset: 0;
+  }
+  100% {
+    outline-offset: 6px;
   }
 }
 .down-arrow {

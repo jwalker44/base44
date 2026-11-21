@@ -1,5 +1,5 @@
 const gulp = require("gulp");
-const concat = require('gulp-concat');
+const concat = require("gulp-concat");
 const sass = require("gulp-sass")(require("sass"));
 const rename = require("gulp-rename");
 const uglifycss = require("gulp-uglifycss");
@@ -12,15 +12,17 @@ const sourcemaps = require("gulp-sourcemaps");
 
 const jsMain = "./src/js/main.js";
 const jsAdmin = "./src/js/admin.js";
+const jsportfolio = "./src/js/portfolio.js";
 
 // ADD BOOTSTRAP JS
-gulp.task('bootstrap-js', function() {
-  return gulp.src([
-    'node_modules/bootstrap/dist/js/bootstrap.min.js',
-    // Add other Bootstrap JS files if needed
-  ])
-  .pipe(concat('bootstrap.min.js'))
-  .pipe(gulp.dest('./build/src/js'));
+gulp.task("bootstrap-js", function () {
+  return gulp
+    .src([
+      "node_modules/bootstrap/dist/js/bootstrap.min.js",
+      // Add other Bootstrap JS files if needed
+    ])
+    .pipe(concat("bootstrap.min.js"))
+    .pipe(gulp.dest("./build/src/js"));
 });
 
 // Compile scss to main.css file in same folder
@@ -30,6 +32,13 @@ gulp.task("scss", function () {
     .pipe(sass().on("error", sass.logError))
     .pipe(gulp.dest("./src/scss/"));
 });
+gulp.task("portfolio", function () {
+  return gulp
+    .src("./src/scss/portfolio.scss")
+    .pipe(sass().on("error", sass.logError))
+    .pipe(gulp.dest("./src/scss/"));
+});
+
 // Rename to main-min.css, minify, and copy to build folder
 gulp.task("min", function () {
   return gulp
@@ -38,7 +47,18 @@ gulp.task("min", function () {
     .pipe(
       uglifycss({
         uglycomments: true,
-      })
+      }),
+    )
+    .pipe(gulp.dest("./build"));
+});
+gulp.task("min-portfolio", function () {
+  return gulp
+    .src("./src/scss/portfolio.css")
+    .pipe(rename({ suffix: "-min" }))
+    .pipe(
+      uglifycss({
+        uglycomments: true,
+      }),
     )
     .pipe(gulp.dest("./build"));
 });
@@ -74,11 +94,31 @@ gulp.task("jsadmin", function () {
     .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest("./build"));
 });
+gulp.task("jsportfolio", function () {
+  return browserify({
+    entries: [jsportfolio],
+  })
+    .transform(babelify, {
+      presets: ["env"],
+    })
+    .bundle()
+    .pipe(source(jsportfolio))
+    .pipe(rename({ extname: ".min.js" }))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({ loadMaps: true }))
+    .pipe(uglify())
+    .pipe(sourcemaps.write("./"))
+    .pipe(gulp.dest("./build"));
+});
+
 // Run all build tasks
-gulp.task("build", gulp.series("scss", "js", "min"));
+gulp.task(
+  "build",
+  gulp.series("scss", "js", "jsportfolio", "portfolio", "min", "min-portfolio"),
+);
 // Watch scss files and run scss and minify tasks
 gulp.task("watch", function () {
-  gulp.watch("./src/scss/parts/*.scss", gulp.series("scss"));
-  gulp.watch("./src/scss/*.css", gulp.series("min"));
-  gulp.watch("./src/js/parts/*.js", gulp.series("js"));
+  gulp.watch("./src/scss/parts/*.scss", gulp.series("scss", "portfolio"));
+  gulp.watch("./src/scss/*.css", gulp.series("min", "min-portfolio"));
+  gulp.watch("./src/js/parts/*.js", gulp.series("js", "jsportfolio"));
 });

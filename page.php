@@ -8,10 +8,7 @@
 get_header();
 ?>
 
-<div id="hero-background">
-    <div id="cover-background">
-        <img alt="base-44 Web Hosting Solutions" src="<?php echo get_stylesheet_directory_uri(); ?>/img/base44-web-hosting-footer.webp" />
-    </div>
+<div id="hero-background" style="opacity:0.1">
     <div id="cover-image">
         <img style="opacity:0.5;" alt="base-44 Web Hosting Solutions"  src="<?php echo get_stylesheet_directory_uri(); ?>/img/base44-web-hosting-footer.webp" />
     </div>

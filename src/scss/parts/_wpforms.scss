@@ -9,3 +9,13 @@
 .wpforms-submit-container {
   text-align: center;
 }
+
+.full-form {
+  .wpforms-field-container,
+  .wpforms-submit-container {
+    max-width: 100% !important;
+  }
+  .wpforms-submit-container {
+    text-align: left;
+  }
+}

@@ -25,3 +25,17 @@ function add_custom_menu_link_class($atts, $item, $args) {
     return $atts;
 }
 add_filter('nav_menu_link_attributes', 'add_custom_menu_link_class', 10, 3);
+
+/**
+ * Register custom List block styles.
+ */
+function base44_register_list_block_styles() {
+	register_block_style(
+		'core/list',
+		array(
+			'name'  => 'boxes',
+			'label' => __( 'Boxes', 'base44' ),
+		)
+	);
+}
+add_action( 'init', 'base44_register_list_block_styles' );
