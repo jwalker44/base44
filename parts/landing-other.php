@@ -68,7 +68,7 @@
                         <h3 class="text-center" style="color: #F3E6C3; font-weight:600;">Graphic Design<br />& Branding</h3>
                         <p style="font-size: 0.9rem;">Give your business a consistent, professional look. From logos and branding to business cards, brochures, marketing materials, and digital graphics, we help bring your ideas to life.</p>
                         <p class="text-center" style="margin-bottom:0;">
-                            <a href="/graphic-design.php" class="button" style="color: #B2C8A8;">Get Started</a>
+                            <a href="/portfolio/" class="button" style="color: #B2C8A8;">Get Started</a>
                         </p>
                     </div>                    
                 </div>
